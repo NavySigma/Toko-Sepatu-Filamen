@@ -33,6 +33,13 @@ class RoleSeeder extends Seeder
             'update_user',
             'delete_user',
 
+            // Barang management — full CRUD for products
+            'view_any_barang',
+            'view_barang',
+            'create_barang',
+            'update_barang',
+            'delete_barang',
+
             // Activity log — read-only for audit
             'view_any_activity',
             'view_activity',
@@ -47,8 +54,10 @@ class RoleSeeder extends Seeder
         $adminKasirRole->syncPermissions($adminKasirPermissions);
 
         // ─── Customer ────────────────────────────────────────────────
-        // Minimal access — view own profile only
+        // Can view products (browse catalog) and own profile
         $customerPermissions = [
+            'view_any_barang',
+            'view_barang',
             'view_my_profile_page',
         ];
 
