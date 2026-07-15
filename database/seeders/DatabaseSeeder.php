@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         // Seed roles & permissions first
         $this->call([
             RoleSeeder::class,
+            BarangSeeder::class,
         ]);
 
         // ─── Kasir ───────────────────────────────────────────────────

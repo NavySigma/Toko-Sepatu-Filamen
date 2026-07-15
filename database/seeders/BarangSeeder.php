@@ -1,0 +1,343 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Barang;
+use Illuminate\Database\Seeder;
+
+class BarangSeeder extends Seeder
+{
+    /**
+     * Seed produk sepatu dari berbagai brand populer.
+     */
+    public function run(): void
+    {
+        $products = [
+            // ─── Nike ────────────────────────────────────────────────────
+            [
+                'nama' => 'Air Max 90',
+                'merk' => 'Nike',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'White',
+                'harga' => 1899000,
+                'stok' => 15,
+                'deskripsi' => 'Ikon legendaris Nike Air Max 90 dengan cushioning Air yang responsif. Desain klasik yang tak lekang waktu, cocok untuk gaya kasual sehari-hari.',
+            ],
+            [
+                'nama' => 'Air Force 1 Low',
+                'merk' => 'Nike',
+                'kategori' => 'Sneakers',
+                'ukuran' => '43',
+                'warna' => 'White',
+                'harga' => 1549000,
+                'stok' => 20,
+                'deskripsi' => 'Sepatu basket ikonik yang telah menjadi simbol budaya street style sejak 1982. Upper kulit premium dengan outsole rubber yang tahan lama.',
+            ],
+            [
+                'nama' => 'Zoom Pegasus 41',
+                'merk' => 'Nike',
+                'kategori' => 'Running',
+                'ukuran' => '42',
+                'warna' => 'Black',
+                'harga' => 1799000,
+                'stok' => 12,
+                'deskripsi' => 'Sepatu lari andalan Nike dengan teknologi Zoom Air unit di forefoot. Ringan, responsif, dan nyaman untuk lari harian maupun tempo.',
+            ],
+            [
+                'nama' => 'Dunk Low Retro',
+                'merk' => 'Nike',
+                'kategori' => 'Sneakers',
+                'ukuran' => '41',
+                'warna' => 'Black/White',
+                'harga' => 1649000,
+                'stok' => 8,
+                'deskripsi' => 'Tampilan klasik dunk yang digemari para sneakerhead. Padded collar untuk kenyamanan ekstra, cocok untuk skateboarding maupun daily wear.',
+            ],
+            [
+                'nama' => 'Revolution 7',
+                'merk' => 'Nike',
+                'kategori' => 'Running',
+                'ukuran' => '44',
+                'warna' => 'Navy',
+                'harga' => 899000,
+                'stok' => 25,
+                'deskripsi' => 'Sepatu lari entry-level dengan cushioning yang lembut. Mesh upper breathable untuk sirkulasi udara optimal saat berlari.',
+            ],
+
+            // ─── Adidas ──────────────────────────────────────────────────
+            [
+                'nama' => 'Ultraboost Light',
+                'merk' => 'Adidas',
+                'kategori' => 'Running',
+                'ukuran' => '42',
+                'warna' => 'Core Black',
+                'harga' => 2800000,
+                'stok' => 10,
+                'deskripsi' => 'Teknologi BOOST paling responsif dari Adidas. 30% lebih ringan dari Ultraboost sebelumnya dengan upper Primeknit+ yang adaptif.',
+            ],
+            [
+                'nama' => 'Stan Smith',
+                'merk' => 'Adidas',
+                'kategori' => 'Sneakers',
+                'ukuran' => '43',
+                'warna' => 'White/Green',
+                'harga' => 1400000,
+                'stok' => 18,
+                'deskripsi' => 'Sneaker paling ikonik sepanjang masa. Desain minimalis dengan upper kulit halus dan signature perforated 3-Stripes.',
+            ],
+            [
+                'nama' => 'Samba OG',
+                'merk' => 'Adidas',
+                'kategori' => 'Sneakers',
+                'ukuran' => '41',
+                'warna' => 'White/Black',
+                'harga' => 1600000,
+                'stok' => 14,
+                'deskripsi' => 'Lahir di lapangan futsal, kini menjadi favorit fashion. Suede T-toe, gum sole klasik, dan siluet yang timeless.',
+            ],
+            [
+                'nama' => 'Gazelle Indoor',
+                'merk' => 'Adidas',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'Collegiate Green',
+                'harga' => 1500000,
+                'stok' => 11,
+                'deskripsi' => 'Versi indoor dari ikon retro Gazelle. Upper suede premium dengan gum outsole yang memberikan tampilan vintage autentik.',
+            ],
+
+            // ─── Puma ────────────────────────────────────────────────────
+            [
+                'nama' => 'Suede Classic XXI',
+                'merk' => 'Puma',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'Black',
+                'harga' => 1099000,
+                'stok' => 16,
+                'deskripsi' => 'Sneaker heritage Puma yang telah mewarnai budaya hip-hop dan skateboarding sejak 1968. Suede upper dengan formstrip klasik.',
+            ],
+            [
+                'nama' => 'RS-X Reinvention',
+                'merk' => 'Puma',
+                'kategori' => 'Sneakers',
+                'ukuran' => '43',
+                'warna' => 'White/Royal',
+                'harga' => 1499000,
+                'stok' => 9,
+                'deskripsi' => 'Chunky sneaker dengan teknologi Running System. Desain retro-futuristik dengan cushioning yang nyaman untuk aktivitas seharian.',
+            ],
+            [
+                'nama' => 'Velocity Nitro 3',
+                'merk' => 'Puma',
+                'kategori' => 'Running',
+                'ukuran' => '44',
+                'warna' => 'Lime',
+                'harga' => 1899000,
+                'stok' => 7,
+                'deskripsi' => 'Sepatu lari performa tinggi dengan foam NITRO™ yang ringan dan responsif. Grip PUMAGRIP untuk traksi di berbagai permukaan.',
+            ],
+
+            // ─── New Balance ─────────────────────────────────────────────
+            [
+                'nama' => '574 Core',
+                'merk' => 'New Balance',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'Grey',
+                'harga' => 1299000,
+                'stok' => 20,
+                'deskripsi' => 'Sneaker paling populer dari New Balance. Kombinasi suede dan mesh dengan ENCAP midsole untuk kenyamanan sepanjang hari.',
+            ],
+            [
+                'nama' => '990v6 Made in USA',
+                'merk' => 'New Balance',
+                'kategori' => 'Sneakers',
+                'ukuran' => '43',
+                'warna' => 'Grey',
+                'harga' => 3299000,
+                'stok' => 5,
+                'deskripsi' => 'Flagship premium New Balance, buatan tangan di AS. FuelCell midsole untuk cushioning superior dan pigskin suede upper.',
+            ],
+            [
+                'nama' => 'Fresh Foam X 1080v13',
+                'merk' => 'New Balance',
+                'kategori' => 'Running',
+                'ukuran' => '42',
+                'warna' => 'Blue',
+                'harga' => 2199000,
+                'stok' => 10,
+                'deskripsi' => 'Sepatu lari premium dengan Fresh Foam X cushioning paling empuk. Hypoknit upper yang adaptif dan breathable.',
+            ],
+            [
+                'nama' => '530',
+                'merk' => 'New Balance',
+                'kategori' => 'Sneakers',
+                'ukuran' => '41',
+                'warna' => 'White/Silver',
+                'harga' => 1399000,
+                'stok' => 13,
+                'deskripsi' => 'Retro runner dari era Y2K dengan ABZORB cushioning. Desain chunky yang kembali populer di kalangan fashion enthusiast.',
+            ],
+
+            // ─── Converse ────────────────────────────────────────────────
+            [
+                'nama' => 'Chuck Taylor All Star Hi',
+                'merk' => 'Converse',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'Black',
+                'harga' => 799000,
+                'stok' => 30,
+                'deskripsi' => 'Sepatu paling ikonik dalam sejarah. Canvas upper yang ringan dengan rubber toe cap dan ankle patch legendaris.',
+            ],
+            [
+                'nama' => 'Chuck 70 Low',
+                'merk' => 'Converse',
+                'kategori' => 'Sneakers',
+                'ukuran' => '41',
+                'warna' => 'Parchment',
+                'harga' => 1099000,
+                'stok' => 15,
+                'deskripsi' => 'Versi premium dari Chuck Taylor dengan canvas yang lebih tebal, insole OrthoLite, dan detail vintage yang autentik.',
+            ],
+
+            // ─── Vans ────────────────────────────────────────────────────
+            [
+                'nama' => 'Old Skool',
+                'merk' => 'Vans',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'Black/White',
+                'harga' => 899000,
+                'stok' => 22,
+                'deskripsi' => 'Ikon skateboarding dengan sidestripe yang legendaris. Canvas dan suede upper dengan waffle outsole untuk board feel yang optimal.',
+            ],
+            [
+                'nama' => 'Sk8-Hi',
+                'merk' => 'Vans',
+                'kategori' => 'Sneakers',
+                'ukuran' => '43',
+                'warna' => 'Black',
+                'harga' => 999000,
+                'stok' => 14,
+                'deskripsi' => 'High-top klasik Vans dengan padded collar untuk ankle support. Desain yang telah menjadi simbol budaya skate dan punk.',
+            ],
+
+            // ─── Reebok ──────────────────────────────────────────────────
+            [
+                'nama' => 'Classic Leather',
+                'merk' => 'Reebok',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'White',
+                'harga' => 1199000,
+                'stok' => 12,
+                'deskripsi' => 'Heritage sneaker dengan upper kulit garment yang lembut. Die-cut EVA midsole untuk cushioning ringan dan nyaman.',
+            ],
+            [
+                'nama' => 'Club C 85',
+                'merk' => 'Reebok',
+                'kategori' => 'Sneakers',
+                'ukuran' => '43',
+                'warna' => 'White/Green',
+                'harga' => 1099000,
+                'stok' => 10,
+                'deskripsi' => 'Tennis shoe dari 1985 yang menjadi ikon lifestyle. Soft leather upper dengan clean lines yang timeless.',
+            ],
+
+            // ─── Asics ───────────────────────────────────────────────────
+            [
+                'nama' => 'Gel-Kayano 31',
+                'merk' => 'Asics',
+                'kategori' => 'Running',
+                'ukuran' => '43',
+                'warna' => 'Black/Blue',
+                'harga' => 2399000,
+                'stok' => 8,
+                'deskripsi' => 'Stability running shoe legendaris dengan GEL™ technology dan 4D GUIDANCE SYSTEM. Ideal untuk overpronator.',
+            ],
+            [
+                'nama' => 'Gel-1130',
+                'merk' => 'Asics',
+                'kategori' => 'Sneakers',
+                'ukuran' => '42',
+                'warna' => 'White/Clay',
+                'harga' => 1699000,
+                'stok' => 11,
+                'deskripsi' => 'Retro runner Y2K yang sedang tren. GEL cushioning di rearfoot dengan desain chunky yang fotogenik dan nyaman.',
+            ],
+
+            // ─── Skechers ────────────────────────────────────────────────
+            [
+                'nama' => 'Go Walk 7',
+                'merk' => 'Skechers',
+                'kategori' => 'Casual',
+                'ukuran' => '43',
+                'warna' => 'Black',
+                'harga' => 999000,
+                'stok' => 18,
+                'deskripsi' => 'Ultra-comfortable walking shoe dengan Hyper Pillar Technology™. Slip-on design yang praktis untuk aktivitas sehari-hari.',
+            ],
+            [
+                'nama' => 'D\'Lites Fresh Start',
+                'merk' => 'Skechers',
+                'kategori' => 'Sneakers',
+                'ukuran' => '40',
+                'warna' => 'White/Navy',
+                'harga' => 1099000,
+                'stok' => 15,
+                'deskripsi' => 'Chunky sneaker populer dengan Air-Cooled Memory Foam insole. Leather upper yang tahan lama dengan platform sole.',
+            ],
+
+            // ─── Sepatu Formal / Boots ───────────────────────────────────
+            [
+                'nama' => 'Classic Chelsea Boot',
+                'merk' => 'Dr. Martens',
+                'kategori' => 'Boots',
+                'ukuran' => '42',
+                'warna' => 'Black',
+                'harga' => 2899000,
+                'stok' => 6,
+                'deskripsi' => 'Boots Chelsea klasik dengan Smooth leather dan AirWair™ bouncing soles. Elastic side panels untuk kemudahan pemakaian.',
+            ],
+            [
+                'nama' => '1461 Oxford',
+                'merk' => 'Dr. Martens',
+                'kategori' => 'Formal',
+                'ukuran' => '43',
+                'warna' => 'Black',
+                'harga' => 2499000,
+                'stok' => 7,
+                'deskripsi' => 'Sepatu tiga lubang ikonik Dr. Martens. Smooth leather dengan yellow welt stitching yang menjadi signature brand.',
+            ],
+
+            // ─── Sandal / Slides ─────────────────────────────────────────
+            [
+                'nama' => 'Adilette Comfort',
+                'merk' => 'Adidas',
+                'kategori' => 'Sandal',
+                'ukuran' => '42',
+                'warna' => 'Black',
+                'harga' => 599000,
+                'stok' => 25,
+                'deskripsi' => 'Slides klasik Adidas dengan Cloudfoam footbed untuk kenyamanan maksimal. 3-Stripes branding yang ikonik.',
+            ],
+            [
+                'nama' => 'Benassi JDI',
+                'merk' => 'Nike',
+                'kategori' => 'Sandal',
+                'ukuran' => '43',
+                'warna' => 'Black/White',
+                'harga' => 449000,
+                'stok' => 20,
+                'deskripsi' => 'Slide ringan Nike untuk recovery setelah olahraga. Injected Phylon midsole dan textured footbed untuk pijatan lembut.',
+            ],
+        ];
+
+        foreach ($products as $product) {
+            Barang::create($product);
+        }
+    }
+}
