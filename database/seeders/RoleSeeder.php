@@ -55,6 +55,10 @@ class RoleSeeder extends Seeder
             'view_my_profile_page',
         ];
 
+        foreach ($adminKasirPermissions as $perm) {
+            Permission::firstOrCreate(['name' => $perm, 'guard_name' => 'web']);
+        }
+
         $adminKasirRole = Role::firstOrCreate(
             ['name' => 'admin_kasir', 'guard_name' => 'web']
         );
@@ -67,6 +71,10 @@ class RoleSeeder extends Seeder
             'view_barang',
             'view_my_profile_page',
         ];
+
+        foreach ($customerPermissions as $perm) {
+            Permission::firstOrCreate(['name' => $perm, 'guard_name' => 'web']);
+        }
 
         $customerRole = Role::firstOrCreate(
             ['name' => 'customer', 'guard_name' => 'web']

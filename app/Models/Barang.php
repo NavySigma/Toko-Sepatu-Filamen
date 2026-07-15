@@ -11,7 +11,7 @@ class Barang extends Model
 
     protected $fillable = [
         'nama',
-        'merk',
+        'merk_id',
         'kategori',
         'ukuran',
         'warna',
@@ -20,6 +20,11 @@ class Barang extends Model
         'deskripsi',
         'gambar',
     ];
+
+    public function merk()
+    {
+        return $this->belongsTo(Merk::class);
+    }
 
     protected $casts = [
         'harga' => 'decimal:2',

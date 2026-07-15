@@ -20,9 +20,16 @@ class TransaksisTable
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('nama_pelanggan')
+                TextColumn::make('pelanggan.nama')
                     ->label('Pelanggan')
                     ->searchable(),
+
+                \Filament\Tables\Columns\ImageColumn::make('items.barang.gambar')
+                    ->label('Produk')
+                    ->disk('public')
+                    ->circular()
+                    ->stacked()
+                    ->limit(3),
 
                 TextColumn::make('tanggal_transaksi')
                     ->label('Tanggal')

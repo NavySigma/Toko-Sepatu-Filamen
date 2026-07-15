@@ -23,13 +23,13 @@ class TransaksiResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'nomor_invoice';
 
-    protected static ?string $navigationLabel = 'Transaksi';
+    protected static ?string $navigationLabel = 'Penjualan (Keluar)';
 
     protected static ?string $modelLabel = 'Transaksi';
 
     protected static ?string $pluralModelLabel = 'Transaksi';
 
-    protected static string|UnitEnum|null $navigationGroup = 'Toko';
+    protected static string|UnitEnum|null $navigationGroup = 'Transaksi';
 
     public static function form(Schema $schema): Schema
     {

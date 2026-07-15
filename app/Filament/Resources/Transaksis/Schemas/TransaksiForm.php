@@ -38,10 +38,11 @@ class TransaksiForm
                             ->default(now())
                             ->required(),
 
-                        TextInput::make('nama_pelanggan')
-                            ->label('Nama Pelanggan')
-                            ->required()
-                            ->maxLength(255),
+                        \Filament\Forms\Components\Select::make('pelanggan_id')
+                            ->label('Pelanggan')
+                            ->relationship('pelanggan', 'nama')
+                            ->searchable()
+                            ->required(),
 
                         Select::make('metode_pembayaran')
                             ->label('Metode Pembayaran')

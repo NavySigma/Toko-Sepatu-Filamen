@@ -37,6 +37,39 @@ class AppServiceProvider extends ServiceProvider
         $this->configureFilament();
 
         $this->configureLimit();
+
+        \Illuminate\Support\Facades\Event::listen('eloquent.*', function (string $eventName, array $data) {
+            // if (app()->runningInConsole()) return;
+
+            if (!str_starts_with($eventName, 'eloquent.created: App\Models\\') && !str_starts_with($eventName, 'eloquent.updated: App\Models\\')) {
+                return;
+            }
+
+            $model = $data[0] ?? null;
+            if (!$model) return;
+
+            if ($model instanceof \App\Models\User || 
+                $model instanceof \Spatie\Activitylog\Models\Activity || 
+                $model instanceof \Illuminate\Notifications\DatabaseNotification) {
+                return;
+            }
+
+            $action = str_starts_with($eventName, 'eloquent.created') ? 'ditambahkan' : 'diperbarui';
+            $modelName = class_basename($model);
+            $nama = $model->nama ?? $model->name ?? '#' . $model->id;
+
+            $users = \App\Models\User::role(['super_admin', 'admin_kasir'])->get();
+
+            if ($users->isNotEmpty()) {
+                \Filament\Notifications\Notification::make()
+                    ->title("Data {$modelName} {$action}")
+                    ->body("{$modelName} '{$nama}' berhasil {$action}.")
+                    ->success()
+                    ->sendToDatabase($users);
+                
+                \Illuminate\Support\Facades\Log::info("Notification sent for {$modelName}");
+            }
+        });
     }
 
     private function configurePolicies(): void

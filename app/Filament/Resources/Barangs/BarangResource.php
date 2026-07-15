@@ -29,7 +29,7 @@ class BarangResource extends Resource
 
     protected static ?string $pluralModelLabel = 'Barang';
 
-    protected static string|UnitEnum|null $navigationGroup = 'Toko';
+    protected static string|UnitEnum|null $navigationGroup = 'Toko Sepatu';
 
     public static function form(Schema $schema): Schema
     {

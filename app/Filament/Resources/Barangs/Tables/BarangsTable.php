@@ -18,6 +18,7 @@ class BarangsTable
             ->columns([
                 ImageColumn::make('gambar')
                     ->label('Foto')
+                    ->disk('public')
                     ->circular(),
 
                 TextColumn::make('nama')
@@ -25,7 +26,7 @@ class BarangsTable
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('merk')
+                TextColumn::make('merk.nama')
                     ->label('Merk')
                     ->searchable()
                     ->sortable(),

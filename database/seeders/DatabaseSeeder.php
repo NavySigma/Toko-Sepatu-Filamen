@@ -17,19 +17,30 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RoleSeeder::class,
             BarangSeeder::class,
+            MasterDataSeeder::class,
         ]);
+
+        // ─── Super Admin ─────────────────────────────────────────────
+        $admin = User::factory()->create([
+            'name' => 'Super Admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('123'),
+        ]);
+        $admin->assignRole('super_admin');
 
         // ─── Kasir ───────────────────────────────────────────────────
         $kasir = User::factory()->create([
             'name' => 'Kasir Toko',
-            'email' => 'kasir@tokosepatu.com',
+            'email' => 'kasir@gmail.com',
+            'password' => bcrypt('123'),
         ]);
         $kasir->assignRole('admin_kasir');
 
         // ─── Customer ────────────────────────────────────────────────
         $customer = User::factory()->create([
             'name' => 'Budi Customer',
-            'email' => 'customer@tokosepatu.com',
+            'email' => 'customer@gmail.com',
+            'password' => bcrypt('123'),
         ]);
         $customer->assignRole('customer');
     }

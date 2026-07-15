@@ -367,6 +367,13 @@ class BarangSeeder extends Seeder
         ];
 
         foreach ($products as $product) {
+            $merkName = $product['merk'];
+            unset($product['merk']);
+            
+            $merk = \App\Models\Merk::firstOrCreate(['nama' => $merkName], ['deskripsi' => 'Brand ' . $merkName]);
+            
+            $product['merk_id'] = $merk->id;
+            
             Barang::create($product);
         }
     }

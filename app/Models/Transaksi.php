@@ -16,13 +16,18 @@ class Transaksi extends Model
     protected $fillable = [
         'nomor_invoice',
         'user_id',
-        'nama_pelanggan',
+        'pelanggan_id',
         'tanggal_transaksi',
         'metode_pembayaran',
         'status',
         'total_harga',
         'catatan',
     ];
+
+    public function pelanggan(): BelongsTo
+    {
+        return $this->belongsTo(Pelanggan::class);
+    }
 
     protected $casts = [
         'tanggal_transaksi' => 'datetime',

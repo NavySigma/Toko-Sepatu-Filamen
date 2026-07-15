@@ -19,10 +19,11 @@ class BarangForm
                     ->required()
                     ->maxLength(255),
 
-                TextInput::make('merk')
+                Select::make('merk_id')
                     ->label('Merk / Brand')
-                    ->required()
-                    ->maxLength(255),
+                    ->relationship('merk', 'nama')
+                    ->searchable()
+                    ->required(),
 
                 Select::make('kategori')
                     ->label('Kategori')
@@ -70,6 +71,7 @@ class BarangForm
                 FileUpload::make('gambar')
                     ->label('Gambar Produk')
                     ->image()
+                    ->disk('public')
                     ->directory('barangs')
                     ->maxSize(2048),
             ]);
