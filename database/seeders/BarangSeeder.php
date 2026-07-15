@@ -23,6 +23,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1899000,
                 'stok' => 15,
                 'deskripsi' => 'Ikon legendaris Nike Air Max 90 dengan cushioning Air yang responsif. Desain klasik yang tak lekang waktu, cocok untuk gaya kasual sehari-hari.',
+                'gambar' => 'products/sneaker_white.png',
             ],
             [
                 'nama' => 'Air Force 1 Low',
@@ -33,6 +34,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1549000,
                 'stok' => 20,
                 'deskripsi' => 'Sepatu basket ikonik yang telah menjadi simbol budaya street style sejak 1982. Upper kulit premium dengan outsole rubber yang tahan lama.',
+                'gambar' => 'products/sneaker_white.png',
             ],
             [
                 'nama' => 'Zoom Pegasus 41',
@@ -43,6 +45,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1799000,
                 'stok' => 12,
                 'deskripsi' => 'Sepatu lari andalan Nike dengan teknologi Zoom Air unit di forefoot. Ringan, responsif, dan nyaman untuk lari harian maupun tempo.',
+                'gambar' => 'products/sneaker_black.png',
             ],
             [
                 'nama' => 'Dunk Low Retro',
@@ -53,6 +56,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1649000,
                 'stok' => 8,
                 'deskripsi' => 'Tampilan klasik dunk yang digemari para sneakerhead. Padded collar untuk kenyamanan ekstra, cocok untuk skateboarding maupun daily wear.',
+                'gambar' => 'products/sneaker_black.png',
             ],
             [
                 'nama' => 'Revolution 7',
@@ -63,6 +67,7 @@ class BarangSeeder extends Seeder
                 'harga' => 899000,
                 'stok' => 25,
                 'deskripsi' => 'Sepatu lari entry-level dengan cushioning yang lembut. Mesh upper breathable untuk sirkulasi udara optimal saat berlari.',
+                'gambar' => 'products/running_blue.png',
             ],
 
             // ─── Adidas ──────────────────────────────────────────────────
@@ -75,6 +80,7 @@ class BarangSeeder extends Seeder
                 'harga' => 2800000,
                 'stok' => 10,
                 'deskripsi' => 'Teknologi BOOST paling responsif dari Adidas. 30% lebih ringan dari Ultraboost sebelumnya dengan upper Primeknit+ yang adaptif.',
+                'gambar' => 'products/sneaker_black.png',
             ],
             [
                 'nama' => 'Stan Smith',
@@ -85,6 +91,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1400000,
                 'stok' => 18,
                 'deskripsi' => 'Sneaker paling ikonik sepanjang masa. Desain minimalis dengan upper kulit halus dan signature perforated 3-Stripes.',
+                'gambar' => 'products/sneaker_white.png',
             ],
             [
                 'nama' => 'Samba OG',
@@ -95,6 +102,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1600000,
                 'stok' => 14,
                 'deskripsi' => 'Lahir di lapangan futsal, kini menjadi favorit fashion. Suede T-toe, gum sole klasik, dan siluet yang timeless.',
+                'gambar' => 'products/suede_sneaker.png',
             ],
             [
                 'nama' => 'Gazelle Indoor',
@@ -105,6 +113,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1500000,
                 'stok' => 11,
                 'deskripsi' => 'Versi indoor dari ikon retro Gazelle. Upper suede premium dengan gum outsole yang memberikan tampilan vintage autentik.',
+                'gambar' => 'products/suede_sneaker.png',
             ],
 
             // ─── Puma ────────────────────────────────────────────────────
@@ -117,6 +126,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1099000,
                 'stok' => 16,
                 'deskripsi' => 'Sneaker heritage Puma yang telah mewarnai budaya hip-hop dan skateboarding sejak 1968. Suede upper dengan formstrip klasik.',
+                'gambar' => 'products/sneaker_black.png',
             ],
             [
                 'nama' => 'RS-X Reinvention',
@@ -127,6 +137,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1499000,
                 'stok' => 9,
                 'deskripsi' => 'Chunky sneaker dengan teknologi Running System. Desain retro-futuristik dengan cushioning yang nyaman untuk aktivitas seharian.',
+                'gambar' => 'products/retro_sneaker.png',
             ],
             [
                 'nama' => 'Velocity Nitro 3',
@@ -137,6 +148,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1899000,
                 'stok' => 7,
                 'deskripsi' => 'Sepatu lari performa tinggi dengan foam NITRO™ yang ringan dan responsif. Grip PUMAGRIP untuk traksi di berbagai permukaan.',
+                'gambar' => 'products/running_lime.png',
             ],
 
             // ─── New Balance ─────────────────────────────────────────────
@@ -149,6 +161,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1299000,
                 'stok' => 20,
                 'deskripsi' => 'Sneaker paling populer dari New Balance. Kombinasi suede dan mesh dengan ENCAP midsole untuk kenyamanan sepanjang hari.',
+                'gambar' => 'products/retro_sneaker.png',
             ],
             [
                 'nama' => '990v6 Made in USA',
@@ -159,6 +172,7 @@ class BarangSeeder extends Seeder
                 'harga' => 3299000,
                 'stok' => 5,
                 'deskripsi' => 'Flagship premium New Balance, buatan tangan di AS. FuelCell midsole untuk cushioning superior dan pigskin suede upper.',
+                'gambar' => 'products/retro_sneaker.png',
             ],
             [
                 'nama' => 'Fresh Foam X 1080v13',
@@ -169,6 +183,7 @@ class BarangSeeder extends Seeder
                 'harga' => 2199000,
                 'stok' => 10,
                 'deskripsi' => 'Sepatu lari premium dengan Fresh Foam X cushioning paling empuk. Hypoknit upper yang adaptif dan breathable.',
+                'gambar' => 'products/running_blue.png',
             ],
             [
                 'nama' => '530',
@@ -179,6 +194,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1399000,
                 'stok' => 13,
                 'deskripsi' => 'Retro runner dari era Y2K dengan ABZORB cushioning. Desain chunky yang kembali populer di kalangan fashion enthusiast.',
+                'gambar' => 'products/sneaker_white.png',
             ],
 
             // ─── Converse ────────────────────────────────────────────────
@@ -191,6 +207,7 @@ class BarangSeeder extends Seeder
                 'harga' => 799000,
                 'stok' => 30,
                 'deskripsi' => 'Sepatu paling ikonik dalam sejarah. Canvas upper yang ringan dengan rubber toe cap dan ankle patch legendaris.',
+                'gambar' => 'products/hightop_canvas.png',
             ],
             [
                 'nama' => 'Chuck 70 Low',
@@ -201,6 +218,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1099000,
                 'stok' => 15,
                 'deskripsi' => 'Versi premium dari Chuck Taylor dengan canvas yang lebih tebal, insole OrthoLite, dan detail vintage yang autentik.',
+                'gambar' => 'products/sneaker_white.png',
             ],
 
             // ─── Vans ────────────────────────────────────────────────────
@@ -213,6 +231,7 @@ class BarangSeeder extends Seeder
                 'harga' => 899000,
                 'stok' => 22,
                 'deskripsi' => 'Ikon skateboarding dengan sidestripe yang legendaris. Canvas dan suede upper dengan waffle outsole untuk board feel yang optimal.',
+                'gambar' => 'products/sneaker_black.png',
             ],
             [
                 'nama' => 'Sk8-Hi',
@@ -223,6 +242,7 @@ class BarangSeeder extends Seeder
                 'harga' => 999000,
                 'stok' => 14,
                 'deskripsi' => 'High-top klasik Vans dengan padded collar untuk ankle support. Desain yang telah menjadi simbol budaya skate dan punk.',
+                'gambar' => 'products/hightop_canvas.png',
             ],
 
             // ─── Reebok ──────────────────────────────────────────────────
@@ -235,6 +255,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1199000,
                 'stok' => 12,
                 'deskripsi' => 'Heritage sneaker dengan upper kulit garment yang lembut. Die-cut EVA midsole untuk cushioning ringan dan nyaman.',
+                'gambar' => 'products/sneaker_white.png',
             ],
             [
                 'nama' => 'Club C 85',
@@ -245,6 +266,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1099000,
                 'stok' => 10,
                 'deskripsi' => 'Tennis shoe dari 1985 yang menjadi ikon lifestyle. Soft leather upper dengan clean lines yang timeless.',
+                'gambar' => 'products/sneaker_white.png',
             ],
 
             // ─── Asics ───────────────────────────────────────────────────
@@ -257,6 +279,7 @@ class BarangSeeder extends Seeder
                 'harga' => 2399000,
                 'stok' => 8,
                 'deskripsi' => 'Stability running shoe legendaris dengan GEL™ technology dan 4D GUIDANCE SYSTEM. Ideal untuk overpronator.',
+                'gambar' => 'products/running_blue.png',
             ],
             [
                 'nama' => 'Gel-1130',
@@ -267,6 +290,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1699000,
                 'stok' => 11,
                 'deskripsi' => 'Retro runner Y2K yang sedang tren. GEL cushioning di rearfoot dengan desain chunky yang fotogenik dan nyaman.',
+                'gambar' => 'products/retro_sneaker.png',
             ],
 
             // ─── Skechers ────────────────────────────────────────────────
@@ -279,6 +303,7 @@ class BarangSeeder extends Seeder
                 'harga' => 999000,
                 'stok' => 18,
                 'deskripsi' => 'Ultra-comfortable walking shoe dengan Hyper Pillar Technology™. Slip-on design yang praktis untuk aktivitas sehari-hari.',
+                'gambar' => 'products/sneaker_black.png',
             ],
             [
                 'nama' => 'D\'Lites Fresh Start',
@@ -289,6 +314,7 @@ class BarangSeeder extends Seeder
                 'harga' => 1099000,
                 'stok' => 15,
                 'deskripsi' => 'Chunky sneaker populer dengan Air-Cooled Memory Foam insole. Leather upper yang tahan lama dengan platform sole.',
+                'gambar' => 'products/retro_sneaker.png',
             ],
 
             // ─── Sepatu Formal / Boots ───────────────────────────────────
@@ -301,6 +327,7 @@ class BarangSeeder extends Seeder
                 'harga' => 2899000,
                 'stok' => 6,
                 'deskripsi' => 'Boots Chelsea klasik dengan Smooth leather dan AirWair™ bouncing soles. Elastic side panels untuk kemudahan pemakaian.',
+                'gambar' => 'products/chelsea_boot.png',
             ],
             [
                 'nama' => '1461 Oxford',
@@ -311,6 +338,7 @@ class BarangSeeder extends Seeder
                 'harga' => 2499000,
                 'stok' => 7,
                 'deskripsi' => 'Sepatu tiga lubang ikonik Dr. Martens. Smooth leather dengan yellow welt stitching yang menjadi signature brand.',
+                'gambar' => 'products/oxford_formal.png',
             ],
 
             // ─── Sandal / Slides ─────────────────────────────────────────
@@ -323,6 +351,7 @@ class BarangSeeder extends Seeder
                 'harga' => 599000,
                 'stok' => 25,
                 'deskripsi' => 'Slides klasik Adidas dengan Cloudfoam footbed untuk kenyamanan maksimal. 3-Stripes branding yang ikonik.',
+                'gambar' => 'products/slide_sandal.png',
             ],
             [
                 'nama' => 'Benassi JDI',
@@ -333,6 +362,7 @@ class BarangSeeder extends Seeder
                 'harga' => 449000,
                 'stok' => 20,
                 'deskripsi' => 'Slide ringan Nike untuk recovery setelah olahraga. Injected Phylon midsole dan textured footbed untuk pijatan lembut.',
+                'gambar' => 'products/slide_sandal.png',
             ],
         ];
 

@@ -49,7 +49,7 @@
             <div class="relative hidden lg:block">
                 <div class="w-[500px] h-[500px] bg-gradient-to-br from-[#FA5400]/20 to-[#FF8A50]/10 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
                 <div class="relative z-10 flex items-center justify-center">
-                    <div class="text-[200px] font-black text-gray-200/50 select-none leading-none">F</div>
+                    <img src="{{ asset('storage/products/hero_shoe.png') }}" alt="Fenrir Hero" class="w-full max-w-[600px] object-contain mix-blend-multiply hover:-translate-y-4 hover:scale-105 transition-all duration-700 ease-out" style="transform: rotate(-10deg); -webkit-mask-image: radial-gradient(ellipse, black 50%, transparent 72%); mask-image: radial-gradient(ellipse, black 50%, transparent 72%);">
                 </div>
             </div>
         </div>
@@ -65,11 +65,22 @@
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         @foreach($categories as $cat)
-        <a href="{{ url('/products?kategori=' . urlencode($cat)) }}" class="group bg-gray-50 hover:bg-[#111] rounded-2xl p-6 text-center transition-all duration-300">
-            <div class="w-12 h-12 mx-auto mb-3 bg-gray-200 group-hover:bg-[#FA5400] rounded-xl flex items-center justify-center transition-colors duration-300">
-                <svg class="w-6 h-6 text-gray-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        @php
+            $catImages = [
+                'Sneakers' => 'sneaker_white.png',
+                'Running' => 'running_lime.png',
+                'Casual' => 'suede_sneaker.png',
+                'Boots' => 'chelsea_boot.png',
+                'Formal' => 'oxford_formal.png',
+                'Sandal' => 'slide_sandal.png',
+            ];
+            $catImg = $catImages[$cat] ?? 'sneaker_black.png';
+        @endphp
+        <a href="{{ url('/products?kategori=' . urlencode($cat)) }}" class="group bg-gray-50 hover:bg-white hover:shadow-xl hover:shadow-[#FA5400]/10 hover:border-[#FA5400]/30 border-2 border-transparent rounded-2xl p-6 text-center transition-all duration-300">
+            <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center rounded-full overflow-hidden shadow-sm border border-gray-200">
+                <img src="{{ asset('storage/products/' . $catImg) }}" alt="{{ $cat }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
             </div>
-            <p class="text-sm font-semibold group-hover:text-white transition-colors">{{ $cat }}</p>
+            <p class="text-sm font-semibold text-gray-700 group-hover:text-[#FA5400] transition-colors">{{ $cat }}</p>
         </a>
         @endforeach
     </div>
