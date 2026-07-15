@@ -94,7 +94,7 @@
             @if($products->count() > 0)
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                 @foreach($products as $product)
-                @include('components.product-card', ['product' => $product])
+                @include('components.product-card', ['product' => $product, 'isPriority' => $loop->iteration <= 4])
                 @endforeach
             </div>
 

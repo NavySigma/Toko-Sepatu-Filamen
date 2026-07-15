@@ -33,6 +33,12 @@
                 <div class="hidden md:flex items-center gap-8">
                     <a href="{{ url('/') }}" class="text-sm font-semibold hover:text-[#FA5400] transition-colors {{ request()->is('/') ? 'text-[#FA5400]' : '' }}">Home</a>
                     <a href="{{ url('/products') }}" class="text-sm font-semibold hover:text-[#FA5400] transition-colors {{ request()->is('products*') ? 'text-[#FA5400]' : '' }}">Katalog</a>
+                    @hasanyrole('admin_kasir|super_admin')
+                    <a href="{{ url('/kasir') }}" class="text-sm font-semibold text-[#FA5400] bg-[#FA5400]/10 px-4 py-1.5 rounded-full hover:bg-[#FA5400]/20 transition-colors flex items-center gap-1.5">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        POS Kasir
+                    </a>
+                    @endhasanyrole
                 </div>
 
                 <div class="flex items-center gap-3">
@@ -94,6 +100,12 @@
             <div class="px-4 py-4 space-y-2">
                 <a href="{{ url('/') }}" class="block py-2 px-4 text-sm font-semibold rounded-xl hover:bg-gray-50">Home</a>
                 <a href="{{ url('/products') }}" class="block py-2 px-4 text-sm font-semibold rounded-xl hover:bg-gray-50">Katalog</a>
+                @hasanyrole('admin_kasir|super_admin')
+                <a href="{{ url('/kasir') }}" class="block py-2 px-4 text-sm font-semibold text-[#FA5400] bg-[#FA5400]/5 rounded-xl hover:bg-[#FA5400]/10 flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    POS Kasir
+                </a>
+                @endhasanyrole
                 @guest
                     <div class="border-t border-gray-100 pt-2 mt-2 flex gap-2">
                         <a href="{{ url('/login') }}" class="flex-1 text-center py-2.5 text-sm font-semibold border-2 border-[#111] rounded-full">Masuk</a>

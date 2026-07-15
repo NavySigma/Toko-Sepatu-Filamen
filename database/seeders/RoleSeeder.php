@@ -40,6 +40,13 @@ class RoleSeeder extends Seeder
             'update_barang',
             'delete_barang',
 
+            // Transaksi management
+            'view_any_transaksi',
+            'view_transaksi',
+            'create_transaksi',
+            'update_transaksi',
+            'delete_transaksi',
+
             // Activity log — read-only for audit
             'view_any_activity',
             'view_activity',

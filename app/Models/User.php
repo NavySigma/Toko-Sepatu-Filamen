@@ -16,9 +16,15 @@ class User extends Authenticatable implements FilamentUser
     /** @use HasFactory<UserFactory> */
     use HasFactory;
 
-    use HasPanelShield;
     use HasRoles;
     use Notifiable;
+
+    public function canAccessPanel(\Filament\Panel $panel): bool
+    {
+        return $this->hasRole('super_admin');
+    }
+
+    protected $guard_name = 'web';
 
     protected $fillable = [
         'name',
