@@ -16,6 +16,15 @@ class MerksTable
             ->columns([
                 TextColumn::make('nama')
                     ->searchable(),
+                TextColumn::make('deskripsi')
+                    ->label('Deskripsi')
+                    ->limit(50)
+                    ->searchable(),
+                TextColumn::make('barangs_count')
+                    ->counts('barangs')
+                    ->label('Total Sepatu')
+                    ->badge()
+                    ->color('success'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
