@@ -73,7 +73,7 @@
                                 @endif
                                 <div class="absolute top-2 left-2 bg-[#111] text-white text-[10px] font-bold px-2 py-0.5 rounded-full" x-text="getProductStock({{ $product->id }}) + ' Stok'"></div>
                             </div>
-                            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">{{ $product->merk }}</p>
+                            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">{{ $product->merk?->nama }}</p>
                             <h3 class="font-semibold text-sm leading-tight mb-1 line-clamp-1 group-hover:text-[#FA5400]">{{ $product->nama }}</h3>
                             <div class="mt-auto flex items-center justify-between">
                                 <p class="font-black text-sm">Rp {{ number_format($product->harga, 0, ',', '.') }}</p>

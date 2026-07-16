@@ -14,6 +14,11 @@ class PembeliansTable
     {
         return $table
             ->columns([
+                \Filament\Tables\Columns\TextColumn::make('nomor_po')
+                    ->label('Nomor PO')
+                    ->searchable()
+                    ->sortable(),
+
                 \Filament\Tables\Columns\TextColumn::make('supplier.nama')
                     ->label('Supplier')
                     ->searchable()

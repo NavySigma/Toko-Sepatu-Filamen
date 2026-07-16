@@ -33,7 +33,7 @@
     </div>
 
     <div class="space-y-1 px-1">
-        <p class="text-xs text-gray-500 font-medium uppercase tracking-wider">{{ $product->merk }}</p>
+        <p class="text-xs text-gray-500 font-medium uppercase tracking-wider">{{ $product->merk?->nama }}</p>
         <h3 class="font-semibold text-sm group-hover:text-[#FA5400] transition-colors line-clamp-1">{{ $product->nama }}</h3>
         <div class="flex items-center gap-2">
             <p class="font-bold text-sm">Rp {{ number_format($product->harga, 0, ',', '.') }}</p>

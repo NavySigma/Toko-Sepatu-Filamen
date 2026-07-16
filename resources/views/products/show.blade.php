@@ -31,7 +31,7 @@
         {{-- Product Info --}}
         <div class="space-y-6">
             <div>
-                <p class="text-sm text-gray-500 font-medium uppercase tracking-wider mb-1">{{ $product->merk }}</p>
+                <p class="text-sm text-gray-500 font-medium uppercase tracking-wider mb-1">{{ $product->merk?->nama }}</p>
                 <h1 class="text-3xl lg:text-4xl font-black tracking-tight" id="product-name">{{ $product->nama }}</h1>
             </div>
 

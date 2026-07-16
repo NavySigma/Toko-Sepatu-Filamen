@@ -17,7 +17,9 @@ class KasirController extends Controller
         if ($request->has('search') && $request->search != '') {
             $query->where(function($q) use ($request) {
                 $q->where('nama', 'like', '%' . $request->search . '%')
-                  ->orWhere('merk', 'like', '%' . $request->search . '%');
+                  ->orWhereHas('merk', function ($q) use ($request) {
+                      $q->where('nama', 'like', '%' . $request->search . '%');
+                  });
             });
         }
 

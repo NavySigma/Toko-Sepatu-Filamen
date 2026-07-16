@@ -14,7 +14,9 @@ class ProductController extends Controller
         if ($search = $request->input('search')) {
             $query->where(function ($q) use ($search) {
                 $q->where('nama', 'like', "%{$search}%")
-                  ->orWhere('merk', 'like', "%{$search}%")
+                  ->orWhereHas('merk', function ($q) use ($search) {
+                      $q->where('nama', 'like', "%{$search}%");
+                  })
                   ->orWhere('deskripsi', 'like', "%{$search}%");
             });
         }
@@ -24,7 +26,9 @@ class ProductController extends Controller
         }
 
         if ($merk = $request->input('merk')) {
-            $query->where('merk', $merk);
+            $query->whereHas('merk', function ($q) use ($merk) {
+                $q->where('nama', $merk);
+            });
         }
 
         if ($warna = $request->input('warna')) {
@@ -50,7 +54,7 @@ class ProductController extends Controller
         $products = $query->paginate(12)->withQueryString();
 
         $categories = Barang::select('kategori')->distinct()->pluck('kategori');
-        $brands = Barang::select('merk')->distinct()->pluck('merk');
+        $brands = \App\Models\Merk::whereHas('barangs')->pluck('nama');
         $colors = Barang::select('warna')->distinct()->pluck('warna');
 
         return view('products.index', compact('products', 'categories', 'brands', 'colors'));

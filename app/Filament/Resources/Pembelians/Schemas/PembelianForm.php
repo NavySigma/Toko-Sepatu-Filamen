@@ -15,6 +15,11 @@ class PembelianForm
                 \Filament\Schemas\Components\Section::make('Info Pembelian')
                     ->columns(2)
                     ->schema([
+                        \Filament\Forms\Components\TextInput::make('nomor_po')
+                            ->label('Nomor PO')
+                            ->unique(ignoreRecord: true)
+                            ->required(),
+
                         \Filament\Forms\Components\Select::make('supplier_id')
                             ->label('Supplier')
                             ->relationship('supplier', 'nama')
@@ -35,6 +40,11 @@ class PembelianForm
                             ])
                             ->default('selesai')
                             ->required(),
+
+                        \Filament\Forms\Components\Textarea::make('catatan')
+                            ->label('Catatan')
+                            ->columnSpanFull()
+                            ->nullable(),
                     ]),
 
                 \Filament\Schemas\Components\Section::make('Item Barang')

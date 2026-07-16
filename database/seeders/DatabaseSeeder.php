@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             BarangSeeder::class,
             MasterDataSeeder::class,
+            PembelianSeeder::class,
+            TransaksiSeeder::class,
         ]);
 
         // ─── Super Admin ─────────────────────────────────────────────

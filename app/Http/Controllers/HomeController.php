@@ -18,9 +18,8 @@ class HomeController extends Controller
             ->distinct()
             ->pluck('kategori');
 
-        $brands = Barang::select('merk')
-            ->distinct()
-            ->pluck('merk');
+        $brands = \App\Models\Merk::whereHas('barangs')
+            ->pluck('nama');
 
         return view('home', compact('featuredProducts', 'categories', 'brands'));
     }

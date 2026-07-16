@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pembelian extends Model
 {
-    protected $fillable = ['supplier_id', 'tanggal_pembelian', 'total_harga', 'status'];
+    protected $fillable = ['nomor_po', 'supplier_id', 'tanggal_pembelian', 'total_harga', 'status', 'catatan'];
 
     public function supplier()
     {

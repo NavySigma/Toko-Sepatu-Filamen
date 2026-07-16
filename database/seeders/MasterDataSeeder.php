@@ -59,7 +59,7 @@ class MasterDataSeeder extends Seeder
             PembelianItem::create([
                 'pembelian_id' => $pembelian->id,
                 'barang_id' => $barang1->id,
-                'kuantitas' => 10,
+                'jumlah' => 10,
                 'harga_beli' => $barang1->harga, // Assuming beli is same as jual for demo
                 'subtotal' => $barang1->harga * 10,
             ]);
@@ -67,7 +67,7 @@ class MasterDataSeeder extends Seeder
             PembelianItem::create([
                 'pembelian_id' => $pembelian->id,
                 'barang_id' => $barang2->id,
-                'kuantitas' => 5,
+                'jumlah' => 5,
                 'harga_beli' => $barang2->harga,
                 'subtotal' => $barang2->harga * 5,
             ]);
@@ -92,7 +92,7 @@ class MasterDataSeeder extends Seeder
             TransaksiItem::create([
                 'transaksi_id' => $transaksi->id,
                 'barang_id' => $barang1->id,
-                'kuantitas' => 1,
+                'jumlah' => 1,
                 'harga_satuan' => $barang1->harga,
                 'subtotal' => $barang1->harga * 1,
             ]);
