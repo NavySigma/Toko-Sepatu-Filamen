@@ -20,7 +20,9 @@
         "jacobtims/filament-logger": "^1.2",
         "jeffgreco13/filament-breezy": "^3.2",
         "laravel/framework": "^13.0",
+        "laravel/reverb": "^1.10",
         "laravel/tinker": "^3.0.0",
+        "pusher/pusher-php-server": "*",
         "spykapps/theme-edinburgh": "^1.0",
         "swisnl/filament-backgrounds": "^2.0"
     },

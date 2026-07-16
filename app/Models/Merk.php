@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Merk extends Model
 {
     protected $fillable = ['nama', 'deskripsi'];
+
+    public function barangs()
+    {
+        return $this->hasMany(Barang::class);
+    }
 }

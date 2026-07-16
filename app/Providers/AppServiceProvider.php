@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 use Spatie\Activitylog\Models\Activity;
 
@@ -37,6 +38,37 @@ class AppServiceProvider extends ServiceProvider
         $this->configureFilament();
 
         $this->configureLimit();
+
+        \Filament\Support\Facades\FilamentView::registerRenderHook(
+            \Filament\View\PanelsRenderHook::BODY_END,
+            fn (): string => '
+                <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+                <script src="https://js.pusher.com/8.0/pusher.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/laravel-echo@1.16.1/dist/echo.iife.js"></script>
+                <script>
+                    window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+                    let token = document.head.querySelector(\'meta[name="csrf-token"]\');
+                    if (token) {
+                        window.axios.defaults.headers.common["X-CSRF-TOKEN"] = token.content;
+                    }
+                    
+                    window.Pusher = Pusher;
+                    window.EchoFactory = Echo;
+                    window.Echo = new Echo({
+                        broadcaster: "pusher",
+                        key: "w5blyrbctqcwxl0k87sr",
+                        cluster: "mt1",
+                        wsHost: window.location.hostname,
+                        wsPort: 8080,
+                        wssPort: 8080,
+                        forceTLS: false,
+                        disableStats: true,
+                        enabledTransports: ["ws", "wss"],
+                    });
+                    window.dispatchEvent(new CustomEvent("EchoLoaded"));
+                </script>
+            ',
+        );
 
         \Illuminate\Support\Facades\Event::listen('eloquent.*', function (string $eventName, array $data) {
             // if (app()->runningInConsole()) return;
@@ -65,7 +97,8 @@ class AppServiceProvider extends ServiceProvider
                     ->title("Data {$modelName} {$action}")
                     ->body("{$modelName} '{$nama}' berhasil {$action}.")
                     ->success()
-                    ->sendToDatabase($users);
+                    ->sendToDatabase($users, true)
+                    ->broadcast($users);
                 
                 \Illuminate\Support\Facades\Log::info("Notification sent for {$modelName}");
             }
