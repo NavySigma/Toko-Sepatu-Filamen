@@ -97,12 +97,19 @@ class TransaksisTable
                         'kartu_kredit' => 'Kartu Kredit',
                     ]),
             ])
+            ->headerActions([
+                \pxlrbt\FilamentExcel\Actions\Tables\ExportAction::make()
+                    ->exports([
+                        \pxlrbt\FilamentExcel\Exports\ExcelExport::make('table')->fromTable(),
+                    ]),
+            ])
             ->recordActions([
                 EditAction::make(),
             ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
+            ->bulkActions([
+                \Filament\Tables\Actions\BulkActionGroup::make([
+                    \Filament\Tables\Actions\DeleteBulkAction::make(),
+                    \pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction::make(),
                 ]),
             ]);
     }

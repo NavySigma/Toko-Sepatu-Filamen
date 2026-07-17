@@ -23,6 +23,7 @@
         "laravel/reverb": "^1.10",
         "laravel/tinker": "^3.0.0",
         "pusher/pusher-php-server": "*",
+        "pxlrbt/filament-excel": "*",
         "spykapps/theme-edinburgh": "^1.0",
         "swisnl/filament-backgrounds": "^2.0"
     },

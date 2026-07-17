@@ -67,6 +67,12 @@ class BarangsTable
                     ]),
                 \Filament\Tables\Filters\TrashedFilter::make(),
             ])
+            ->headerActions([
+                \pxlrbt\FilamentExcel\Actions\Tables\ExportAction::make()
+                    ->exports([
+                        \pxlrbt\FilamentExcel\Exports\ExcelExport::make('table')->fromTable(),
+                    ]),
+            ])
             ->recordActions([
                 \Filament\Actions\EditAction::make(),
                 \Filament\Actions\DeleteAction::make(),
@@ -77,6 +83,7 @@ class BarangsTable
                     \Filament\Actions\DeleteBulkAction::make(),
                     \Filament\Actions\RestoreBulkAction::make(),
                     \Filament\Actions\ForceDeleteBulkAction::make(),
+                    \pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction::make(),
                 ]),
             ]);
     }
