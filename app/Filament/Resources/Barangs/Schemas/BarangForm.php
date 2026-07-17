@@ -23,6 +23,7 @@ class BarangForm
                     ->label('Merk / Brand')
                     ->relationship('merk', 'nama')
                     ->searchable()
+                    ->preload()
                     ->required(),
 
                 Select::make('kategori')
@@ -71,6 +72,11 @@ class BarangForm
                 FileUpload::make('gambar')
                     ->label('Gambar Produk')
                     ->image()
+                    ->optimize('webp')
+                    ->imageResizeMode('cover')
+                    ->imageCropAspectRatio('1:1')
+                    ->imageResizeTargetWidth('800')
+                    ->imageResizeTargetHeight('800')
                     ->disk('public')
                     ->directory('barangs')
                     ->maxSize(2048),

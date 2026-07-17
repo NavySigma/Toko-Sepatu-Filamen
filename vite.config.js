@@ -1,6 +1,19 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
+import os from 'os';
+
+function getLocalIP() {
+    const interfaces = os.networkInterfaces();
+    for (const name of Object.keys(interfaces)) {
+        for (const iface of interfaces[name]) {
+            if (iface.family === 'IPv4' && !iface.internal) {
+                return iface.address;
+            }
+        }
+    }
+    return 'localhost';
+}
 
 export default defineConfig({
     server: {
@@ -9,7 +22,7 @@ export default defineConfig({
             origin: '*',
         },
         hmr: {
-            host: '10.39.30.122', // IP HP / Local Network
+            host: getLocalIP(),
         },
     },
     plugins: [

@@ -24,6 +24,7 @@ class PembelianForm
                             ->label('Supplier')
                             ->relationship('supplier', 'nama')
                             ->searchable()
+                            ->preload()
                             ->required(),
 
                         \Filament\Forms\Components\DatePicker::make('tanggal_pembelian')
