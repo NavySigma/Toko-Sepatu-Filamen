@@ -35,6 +35,7 @@
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
+        "orangehill/iseed": "*",
         "phpunit/phpunit": "^12.5.22",
         "plannr/laravel-fast-refresh-database": "^1.2"
     },

@@ -13,37 +13,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Seed roles & permissions first
-        $this->call([
-            RoleSeeder::class,
-            BarangSeeder::class,
-            MasterDataSeeder::class,
-            PembelianSeeder::class,
-            TransaksiSeeder::class,
-        ]);
-
-        // ─── Super Admin ─────────────────────────────────────────────
-        $admin = User::factory()->create([
-            'name' => 'Super Admin',
-            'email' => 'admin@gmail.com',
-            'password' => bcrypt('123'),
-        ]);
-        $admin->assignRole('super_admin');
-
-        // ─── Kasir ───────────────────────────────────────────────────
-        $kasir = User::factory()->create([
-            'name' => 'Kasir Toko',
-            'email' => 'kasir@gmail.com',
-            'password' => bcrypt('123'),
-        ]);
-        $kasir->assignRole('admin_kasir');
-
-        // ─── Customer ────────────────────────────────────────────────
-        $customer = User::factory()->create([
-            'name' => 'Budi Customer',
-            'email' => 'customer@gmail.com',
-            'password' => bcrypt('123'),
-        ]);
-        $customer->assignRole('customer');
+        $this->call(UsersTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(RoleHasPermissionsTableSeeder::class);
+        $this->call(ModelHasRolesTableSeeder::class);
+        $this->call(MerksTableSeeder::class);
+        $this->call(BarangsTableSeeder::class);
+        $this->call(PelanggansTableSeeder::class);
+        $this->call(SuppliersTableSeeder::class);
+        $this->call(PembeliansTableSeeder::class);
+        $this->call(PembelianItemsTableSeeder::class);
+        $this->call(TransaksisTableSeeder::class);
+        $this->call(TransaksiItemsTableSeeder::class);
     }
 }
