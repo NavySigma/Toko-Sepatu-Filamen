@@ -24,6 +24,7 @@
         "laravel/tinker": "^3.0.0",
         "pusher/pusher-php-server": "*",
         "pxlrbt/filament-excel": "*",
+        "revolution/laravel-google-sheets": "^7.2",
         "spykapps/theme-edinburgh": "^1.0",
         "swisnl/filament-backgrounds": "^2.0"
     },

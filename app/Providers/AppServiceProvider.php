@@ -34,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
         $this->configureDB();
 
         $this->configureModels();
+        \App\Models\Transaksi::observe(\App\Observers\TransaksiObserver::class);
+        \App\Models\Pembelian::observe(\App\Observers\PembelianObserver::class);
 
         $this->configureFilament();
 

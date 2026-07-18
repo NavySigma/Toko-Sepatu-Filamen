@@ -78,8 +78,8 @@ class PembeliansTable
                 EditAction::make(),
             ])
             ->bulkActions([
-                \Filament\Tables\Actions\BulkActionGroup::make([
-                    \Filament\Tables\Actions\DeleteBulkAction::make(),
+                \Filament\Actions\BulkActionGroup::make([
+                    \Filament\Actions\DeleteBulkAction::make(),
                     \pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction::make(),
                 ]),
             ]);
